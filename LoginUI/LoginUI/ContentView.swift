@@ -39,24 +39,29 @@ struct ContentView: View {
                         .clipShape(.buttonBorder)
                 
                 HStack{
-                    Toggle(isOn: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Is On@*/.constant(true)/*@END_MENU_TOKEN@*/) {
+                    Toggle(isOn: .constant(true)) {
                         
-                    }.frame(width: 50)
-                        .foregroundStyle(.blue)
+                    }
+                    .frame(width: 50)
+                    .toggleStyle(SwitchToggleStyle(tint: .cyan))
                     
                     Text("Recordar contraseña")
-                        .frame(minWidth: 30)
-                }
+                }.padding(5)
                 
                 Button("Login") {
                     
                 }
+                .padding(.leading, 30)
+                .padding(.trailing, 30)
                 .padding()
                 .background(.cyan)
                 .foregroundStyle(.white)
                 .clipShape(.buttonBorder)
                 
                 Text("Recuperar Contraseña")
+                    .foregroundColor(.cyan)
+                    .frame(height: 50)
+                    .padding(.trailing, -100)
             }
         }
     }
