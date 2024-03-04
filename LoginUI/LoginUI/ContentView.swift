@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@State var isOn: Bool = false
+var isOn: Bool = false
 
 struct ContentView: View {
     var body: some View {
@@ -41,7 +41,7 @@ struct ContentView: View {
                         .clipShape(.buttonBorder)
                 
                 HStack{
-                    Toggle(isOn: $isOn) {
+                    Toggle(isOn: .constant(false)) {
                         
                     }
                     .frame(width: 50)
